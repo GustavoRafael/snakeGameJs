@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta http-equiv='X-UA-Compatible' content="ie=edge,chrome=1"> 
     <title>SnakeGame</title>
     <style>
         body{
@@ -17,17 +17,20 @@
         }
 
         #game-board{
-            background-color: #cccccc;
+            background-color: #CCC;
             width: 100vmin;
             height: 100vmin;
             display: grid;
-            grid-template-columns: repeat(21, 1fr);
             grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+            
         }
+
         .snake{
             background-color: hsl(200,100%,50%);
             border: .25vmin solid black;
         }
+
         .food{
             background-color: hsl(50,100%,50%);
             border: .25vmin solid black;
@@ -37,6 +40,5 @@
 </head>
 <body>
     <div id="game-board"></div>
-    
 </body>
 </html>
