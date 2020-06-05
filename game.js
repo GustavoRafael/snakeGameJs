@@ -7,12 +7,16 @@ import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 const gameBoard = document.getElementById('game-board')
 let gameOver = false
-let score = 0
+
+const finalMessage = score => {
+    return `You lost!!!\n Score: ${score} \n Press ok to restart.`
+} 
+
 
 function main(currentTime){
     
     if(gameOver) {
-        if(confirm(`You lost \n Score: ${getFoodScore()} \n Press ok to restart.`)){
+        if(confirm(finalMessage(getFoodScore()))){
             window.location = '/'
         }
         return
@@ -52,3 +56,12 @@ function checkDeath(){
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
 
+function gameStatus(){
+    if(gameOver) {
+        if(confirm(finalMessage)){
+            window.location = '/'
+        }
+        return
+    }
+    return
+}
