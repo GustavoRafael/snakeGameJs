@@ -19,9 +19,25 @@
             text-align: center;
             background-color: black;
             color: #CCC;
-            padding: 10px;
+            padding: 5px;
             
-        }        
+        }  
+        
+        .gameScoreBoard{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #CCC;
+            background-color: black;
+            padding: 10px;
+            margin: auto;
+
+        }
+
+        .scoreBoard{
+            float: left;
+            width: 50%;
+            background-color: darkgoldenrod;    
+        }
 
         #game-board{
             background-color: #CCC;
@@ -32,7 +48,7 @@
             grid-template-columns: repeat(21, 1fr);
             margin: auto;            
         }
-
+        
         .snake{
             background-color: hsl(200,100%,50%);
             border: .25vmin solid black;
@@ -50,10 +66,21 @@
             <h1> The Snake Game!!</h1> 
     </header>
 
-    <br>
-
     <section>
         <div id="game-board"></div>
+    </section>
+    
+    <section class="gameScoreBoard">
+        <div class="scoreBoard">
+            <div id="score">
+                <h2>Score </h2>
+            </div>
+        </div>
+
+        <div class="scoreBoard">
+            <h2>Max Score</h2>
+        </div>      
+
     </section>
     
 </body>
