@@ -19,7 +19,7 @@ function main(currentTime){
     
     if(gameOver) {
         if(confirm(finalMessage(getFoodScore()))){
-            window.location = '/'
+            window.location = '/snakeGameJs/'
         }
         return
     }
