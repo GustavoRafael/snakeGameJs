@@ -17,23 +17,26 @@
         .gameHeader{
             font-family:Arial, Helvetica, sans-serif;
             text-align: center;
-            background-color: blue;
+            background-color: black;
             color: #CCC;
-            width: 40%;
-            padding: 4px;
-            margin: auto;
-            
+            width: 100%;            
         }  
         
         .gameScoreBoard{
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            color: #CCC;
             background-color: rgb(78, 129, 85);   
-            width: 40%;
-            padding: 2px;
-            margin: auto;         
+            color: rgb(119, 212, 56);  
+            margin: auto;
+        }
 
+        #score{              
+            width: 50%;
+            float: left;           
+        }
+        #maxScore{
+            width: 50%;
+            float: left;            
         }
 
         #game-board{
@@ -61,20 +64,21 @@
 </head>
 <body>
     <header class="gameHeader">
-            <h2> The Snake Game!!</h2> 
+            <h3> The Snake Game!!</h3> 
+            <section class="gameScoreBoard">
+                <div id="score">
+                    <h2>Score: </h2>
+                </div>
+                <div id="maxScore">
+                    <h2>Max Score: </h2>
+                </div>
+            </section>              
     </header>
 
     <section>
         <div id="game-board"></div>
     </section>
     
-    <section class="gameScoreBoard">
-        <div id="score">
-            <h2>Score: </h2>
-        </div>
-        <div id="maxScore"> Max Score:</div>
-
-    </section>
     
 </body>
 </html>
