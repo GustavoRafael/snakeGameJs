@@ -59,6 +59,20 @@
             background-color: hsl(50,100%,50%);
             border: .25vmin solid black;
         }
+        button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+          
+          .button1 {background-color: #4CAF50;} /* Green */
+          
     </style>
     <script src="game.js" defer type="module"></script>
 </head>
@@ -79,6 +93,7 @@
         <div id="game-board"></div>
     </section>
     
+    <button class="button button1" onclick="moveUp()">UP</button>
     
 </body>
 </html>
