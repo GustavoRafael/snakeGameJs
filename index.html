@@ -72,7 +72,10 @@
           }
           
           .button1 {background-color: #4CAF50;} /* Green */
-          
+          .button2 {background-color: #4CAF50;} /* Green */
+          .button3 {background-color: #4CAF50;} /* Green */
+          .button4 {background-color: #4CAF50;} /* Green */
+
     </style>
     <script src="game.js" defer type="module"></script>
 </head>
@@ -94,6 +97,23 @@
     </section>
     
     <button class="button button1" onclick="moveUp()">UP</button>
-    
+    <button class="button button2" onclick="moveDown()" >Down</button>
+    <button class="button button3" onclick="moveLeft()">Left</button>
+    <button class="button button4" onclick="moveRight()" >Right</button>
+    <script>
+        function moveUp(){
+            console.log("move up!!")
+        }
+        function moveDown(){
+            console.log("move Down!!")
+        }
+        function moveLeft(){
+            console.log("move left!!")
+        }
+        function moveRight(){
+            console.log("move right!!")
+        }
+    </script>
+
 </body>
 </html>
