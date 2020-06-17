@@ -6,9 +6,13 @@ import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
 const gameBoard = document.getElementById('game-board')
-const scoreBoard = document.getElementById('score');
+const scoreElement = document.getElementById('score');
+const maxScoreElement = document.getElementById('maxScore');
 let gameOver = false
 let currentScore = 0;
+let maxScore = Number(sessionStorage.getItem("currMax"));
+// Stores max value
+// sessionStorage.setItem("currMax", "0");
 
 const finalMessage = score => {
     return `You lost!!!\n Score: ${score} \n Press ok to restart.`
@@ -18,6 +22,7 @@ const finalMessage = score => {
 function main(currentTime){
     
     if(gameOver) {
+        
         if(confirm(finalMessage(getFoodScore()))){
             window.location = window.location.pathname
         }
@@ -45,6 +50,7 @@ function update() {
     updateSnake()
     updateFood()
     checkDeath()
+    updateMaxScore()
     
 }
 
@@ -52,6 +58,7 @@ function draw() {
     
     gameBoard.innerHTML = ''
     showScore()
+    showMaxScore()
     drawSnake(gameBoard)
     drawFood(gameBoard)
 }
@@ -75,7 +82,51 @@ function showScore(){
     }
     if(currentScore !== getFoodScore()){
         currentScore = getFoodScore();
-        scoreBoard.innerHTML = scoreText(currentScore);
+        scoreElement.innerHTML = scoreText(currentScore);
     }
+}
 
+// function showMaxScore(){
+//     const maxScoreText = maxValue => {
+//         return `<h1>Max Score: ${maxValue} </h1>`
+//     }
+//     if(maxScore < getFoodScore()){
+//         maxScore = getFoodScore();
+//         maxScoreElement.innerHTML = maxScoreText(maxScore);
+//     }
+
+//     // Retrieve
+//     sessionStorage.getItem("currMax");
+// }
+
+function showMaxScore(){
+    if(typeof(Storage) !== "undefined"){
+        const maxScoreText = maxValue => {
+            return `<h1>Max Score: ${maxValue} </h1>`
+        }
+        if(maxScore < getFoodScore()){
+            maxScore = getFoodScore();
+             // Store
+            sessionStorage.setItem("currMax", `${maxScore}`);
+            maxScoreElement.innerHTML = maxScoreText(sessionStorage.getItem("currMax"));
+        } 
+    }else{
+        maxScoreElement.innerHTML = "Sorry, browser does not support web storage...";
+    }
+}
+
+function updateMaxScore(){
+    const maxScoreText = maxValue => {
+        return `<h1>Max Score: ${maxValue} </h1>`
+    }
+    maxScoreElement.innerHTML = maxScoreText(sessionStorage.getItem("currMax"));
+}
+
+// function moveUp(){
+//     console.log("hello")
+// }
+
+const buttonUp = document.getElementsById("button button1");
+buttonUp.onclick = ()=> {
+    console.log("move up!!")
 }
