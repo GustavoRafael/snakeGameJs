@@ -24,7 +24,9 @@ function main(currentTime){
     if(gameOver) {
         
         if(confirm(finalMessage(getFoodScore()))){
+            console.log(window.location.pathname)
             window.location = window.location.pathname
+
         }
         return
     }
