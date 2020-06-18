@@ -41,8 +41,8 @@
 
         #game-board{
             background-color: #CCC;
-            width: 80vmin;
-            height: 80vmin;
+            width: 70vmin;
+            height: 70vmin;
             display: grid;
             grid-template-rows: repeat(21, 1fr);
             grid-template-columns: repeat(21, 1fr);
@@ -68,7 +68,51 @@
             background-color: hsl(50,100%,50%);
             border: .25vmin solid black;
         }
-        button {
+        #button-button1 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #button-button2 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #button-button3 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #button-button4 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button {
             border: none;
             color: white;
             padding: 15px 32px;
@@ -80,13 +124,14 @@
             cursor: pointer;
         }
           
-        .button1 {background-color: #4CAF50;} /* Green */
-        .button2 {background-color: #4CAF50;} /* Green */
-        .button3 {background-color: #4CAF50;} /* Green */
-        .button4 {background-color: #4CAF50;} /* Green */
+        #button-button1 {background-color: #4CAF50;} /* Green */
+        #button-button2 {background-color: #4CAF50;} /* Green */
+        #button-button3 {background-color: #4CAF50;} /* Green */
+        #button-button4 {background-color: #4CAF50;} /* Green */
 
     </style>
-    <script src="game.js" defer type="module"></script>
+    <script src="/game.js" defer type="module"></script>
+    
 </head>
 <body>
     <header class="gameHeader">
@@ -106,24 +151,12 @@
     </section>
 
     <footer class="commandPalet">
-        <button class="button button1">UP</button>
-        <button class="button button2" onclick="moveDown()" >Down</button>
-        <button class="button button3" onclick="moveLeft()">Left</button>
-        <button class="button button4" onclick="moveRight()" >Right</button>
-        <script>
-            function moveUp(){
-                console.log("move up!!")
-            }
-            function moveDown(){
-                console.log("move Down!!")
-            }
-            function moveLeft(){
-                console.log("move left!!")
-            }
-            function moveRight(){
-                console.log("move right!!")
-            }
-        </script>
+        <a id="button-button3"  >Left</a>
+        <a id="button-button1"  >UP</a>
+        <a id="button-button2"  >Down</a>
+        <a id="button-button4"  >Right</a>
+        <script id="/input.js" type="module" ></script>
+        
     </footer>
     
 

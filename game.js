@@ -126,7 +126,5 @@ function updateMaxScore(){
 //     console.log("hello")
 // }
 
-const buttonUp = document.getElementsById("button button1");
-buttonUp.onclick = ()=> {
-    console.log("move up!!")
-}
+
+

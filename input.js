@@ -29,3 +29,27 @@ export function getInputDirection(){
     lastInputDirection = inputDirection;
     return inputDirection;
 }
+
+const button1 = document.getElementById("button-button1");
+button1.onclick = () => {
+    console.log("move up!!")
+    if(lastInputDirection.y === 0) inputDirection = { x: 0, y: -1}
+}
+
+const button2 = document.getElementById("button-button2");
+button2.onclick = () => {
+    console.log("move Down!!")
+    if(lastInputDirection.y === 0) inputDirection = { x: 0, y: 1}
+}
+
+const button3 = document.getElementById("button-button3");
+button3.onclick = () => {
+    console.log("move left!!")
+    if(lastInputDirection.x === 0) inputDirection = { x: -1, y: 0}
+}
+
+const button4 = document.getElementById("button-button4");
+button4.onclick = () => {
+    console.log("move right!!")
+    if(lastInputDirection.x === 0) inputDirection = { x: 1, y: 0}
+}
