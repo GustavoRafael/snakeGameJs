@@ -10,7 +10,7 @@ const scoreElement = document.getElementById('score');
 const maxScoreElement = document.getElementById('maxScore');
 let gameOver = false
 let currentScore = 0;
-let maxScore = Number(sessionStorage.getItem("currMax"));
+let maxScore = Number(sessionStorage.getItem("currMax"))=== null? 0: Number(sessionStorage.getItem("currMax"));
 // Stores max value
 // sessionStorage.setItem("currMax", "0");
 
